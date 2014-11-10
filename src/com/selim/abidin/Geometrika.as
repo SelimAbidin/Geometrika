@@ -80,11 +80,8 @@ package com.selim.abidin
 			
 			infoLayer = new GameInfoLayer();
 			this.addChild(infoLayer);
-			this.addEventListener(Event.ENTER_FRAME, update);
-			
-			
+			this.addEventListener(Event.ENTER_FRAME, update);			
 			this.addChild(hero);
-			
 			
 		}
 
