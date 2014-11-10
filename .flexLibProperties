@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="com.selim.abidin.GeometrikaBase"/>
+    <classEntry path="com.selim.abidin.utils.Config"/>
+    <classEntry path="com.selim.abidin.Geometrika"/>
+    <classEntry path="com.selim.abidin.display.BackGround"/>
+    <classEntry path="com.selim.abidin.display.object.SQuad"/>
+    <classEntry path="com.selim.abidin.display.object.MeteorQuad"/>
+    <classEntry path="com.selim.abidin.display.IUpdatable"/>
+    <classEntry path="com.selim.abidin.display.Menu"/>
+    <classEntry path="com.selim.abidin.events.MenuEvents"/>
+    <classEntry path="com.selim.abidin.display.GameInfoLayer"/>
+    <classEntry path="com.selim.abidin.display.Hero"/>
+    <classEntry path="com.selim.abidin.display.Flame"/>
+    <classEntry path="com.selim.abidin.display.object.FlameQuad"/>
+    <classEntry path="com.selim.abidin.controller.ClassicController"/>
+    <classEntry path="com.selim.abidin.events.HeroEvent"/>
+    <classEntry path="com.selim.abidin.display.fires.FireQuadBack"/>
+    <classEntry path="com.selim.abidin.display.fires.types.ClassicFire"/>
+    <classEntry path="com.selim.abidin.data.Level"/>
+    <classEntry path="com.selim.abidin.display.EnemyProvider"/>
+    <classEntry path="com.selim.abidin.display.enemies.DeltaWing"/>
+    <classEntry path="com.selim.abidin.display.IMatchable"/>
+    <classEntry path="com.selim.abidin.utils.Matcher"/>
+    <classEntry path="com.selim.abidin.display.enemies.Enemy"/>
+    <classEntry path="com.selim.abidin.display.fires.types.Fire"/>
+    <classEntry path="com.selim.abidin.display.ParticleProvider"/>
+    <classEntry path="com.selim.abidin.display.object.Particle"/>
+    <classEntry path="com.selim.abidin.display.object.particles.HeroParticle"/>
+    <classEntry path="com.selim.abidin.display.object.particles.BasicParticle"/>
+    <classEntry path="com.selim.abidin.display.object.particles.SinusParticles"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
