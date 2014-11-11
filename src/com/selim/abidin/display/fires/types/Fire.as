@@ -10,8 +10,8 @@ package com.selim.abidin.display.fires.types
 		public function Fire()
 		{
 			super();
+			
 		}
-		
 		
 		
 		public function get effectRange():Number
@@ -22,14 +22,6 @@ package com.selim.abidin.display.fires.types
 		public function explode():void
 		{
 			this.isValid = false;
-		}
-		
-		public function getX():Number{
-			return this.x;
-		}
-		
-		public function getY():Number{
-			return this.y;
 		}
 		
 		

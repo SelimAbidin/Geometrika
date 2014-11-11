@@ -8,13 +8,13 @@ package com.selim.abidin.display.enemies
 	import starling.display.Image;
 	import starling.textures.Texture;
 	
-	public class Enemy extends Image implements IUpdatable, IMatchable
+	public class Enemy extends Image implements IUpdatable, IMatchable, IEnemy
 	{
 		public var scorePoint:int = 0;
 		protected var particleLayer:ParticleProvider;
-		public var isValid:Boolean;
+		protected var _isValid:Boolean;
 		protected var _effectRange:Number;
-		public var isShotable:Boolean = true;
+		protected var _isShotable:Boolean = true;
 		protected var param:Object;
 		protected var enemyProvider:EnemyProvider;
 		protected var explodeCallBack:Function;
@@ -49,13 +49,23 @@ package com.selim.abidin.display.enemies
 			return _effectRange;
 		}
 		
-		public function getX():Number{
-			return this.x;
+		public function set isShotable(b:Boolean):void{
+			_isShotable = b;
 		}
 		
-		public function getY():Number{
-			return this.y;
+		public function get isShotable():Boolean{
+			return _isShotable;
 		}
+		
+		public function set isValid(b:Boolean):void{
+			_isValid = b;
+		}
+		
+		public function get isValid():Boolean{
+			return _isValid;
+		}
+		
+		
 		
 		
 	}

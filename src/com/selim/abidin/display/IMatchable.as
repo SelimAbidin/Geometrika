@@ -4,8 +4,8 @@ package com.selim.abidin.display
 	{
 		function get effectRange():Number;
 		function explode():void;
-		function getX():Number;
-		function getY():Number;
+		function get x():Number;
+		function get y():Number;
 		
 		
 	}

@@ -6,6 +6,7 @@ package com.selim.abidin.display
 	import com.selim.abidin.display.enemies.DeltaWing;
 	import com.selim.abidin.display.enemies.DeltaWingWithCannon;
 	import com.selim.abidin.display.enemies.Enemy;
+	import com.selim.abidin.display.enemies.IEnemy;
 	import com.selim.abidin.display.enemies.SinusManeuverWing;
 	import com.selim.abidin.utils.Config;
 	
@@ -30,7 +31,7 @@ package com.selim.abidin.display
 		private var queque:Array = [];
 		private var enemies:Array = [DeltaWingWithCannon,DeltaWing, SinusManeuverWing, BasicEnemyFire];
 		private var _deadBodies:Dictionary = new Dictionary();
-		public var totalEnemies:Vector.<Enemy> = new Vector.<Enemy>();
+		public var totalEnemies:Vector.<IEnemy> = new Vector.<IEnemy>();
 		
 		public var isEnemyCreateEnabled:Boolean = true;
 		private var particleLayer:ParticleProvider;
@@ -43,6 +44,7 @@ package com.selim.abidin.display
 			this.enemyExplodedCallBack = enemyExplodedCallBack;
 			this.particleLayer = particleLayer;
 			texture = GeometrikaBase.assetsManager.getTexture("enemy");
+			
 		}
 		
 		
@@ -79,7 +81,6 @@ package com.selim.abidin.display
 					
 					if(timer > Level.levelMobs[0][enemyTemp].time)
 					{
-						//trace("______________________________");
 						var cls:Class = enemies[Level.levelMobs[0][enemyTemp].enemy];
 						var tween:int = Level.levelMobs[0][enemyTemp].tween;
 						
@@ -162,7 +163,7 @@ package com.selim.abidin.display
 				{
 					totalEnemies[i].update();
 					
-					this.addImage(totalEnemies[i]);
+					this.addImage(totalEnemies[i] as Image);
 				}
 
 				
@@ -203,9 +204,9 @@ package com.selim.abidin.display
 			   return Class(getDefinitionByName(getQualifiedClassName(obj)));
 		 }
 		
-		public function fireOnce(type:int, param:Object=null):Enemy
+		public function fireOnce(type:int, param:Object=null):IEnemy
 		{
-			var tempEn:Enemy = createMob(enemies[type],param) as Enemy;
+			var tempEn:IEnemy = createMob(enemies[type],param) as IEnemy;
 			totalEnemies.push(tempEn);
 			return tempEn;
 		}

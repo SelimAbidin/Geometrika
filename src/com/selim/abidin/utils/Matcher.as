@@ -4,6 +4,7 @@ package com.selim.abidin.utils
 	import com.selim.abidin.display.IMatchable;
 	import com.selim.abidin.display.IUpdatable;
 	import com.selim.abidin.display.enemies.Enemy;
+	import com.selim.abidin.display.enemies.IEnemy;
 	import com.selim.abidin.display.fires.types.Fire;
 	
 	import flash.display.Sprite;
@@ -11,7 +12,7 @@ package com.selim.abidin.utils
 	public class Matcher implements IUpdatable
 	{
 		private var goodSide:Vector.<Vector.<Fire>> = new Vector.<Vector.<Fire>>();
-		private var badSide:Vector.<Vector.<Enemy>> = new Vector.<Vector.<Enemy>>();
+		private var badSide:Vector.<Vector.<IEnemy>> = new Vector.<Vector.<IEnemy>>();
 		public function Matcher()
 		{
 			//Geometrika.st.addChild(sp);
@@ -26,7 +27,7 @@ package com.selim.abidin.utils
 		
 		
 		private var temp:Vector.<Fire>;
-		private var btemp:Vector.<Enemy>;
+		private var btemp:Vector.<IEnemy>;
 		public function update():void
 		{
 			for (var i:int = 0; i < goodSide.length; i++) 
@@ -72,10 +73,10 @@ package com.selim.abidin.utils
 		
 		
 		
-		final public function match(good:IMatchable, bad:IMatchable):Boolean
+		final public function match(good:IMatchable, bad:IEnemy):Boolean
 		{
-			var dx:Number = good.getX() - bad.getX();
-			var dy:Number = good.getY() - bad.getY();
+			var dx:Number = good.x - bad.x;
+			var dy:Number = good.y - bad.y;
 			var dist:Number = Math.sqrt((dx * dx)+(dy * dy));
 			
 			if(dist < bad.effectRange + good.effectRange)
@@ -95,7 +96,7 @@ package com.selim.abidin.utils
 		
 		
 		
-		public function addBadSide(v:Vector.<Enemy>):void
+		public function addBadSide(v:Vector.<IEnemy>):void
 		{
 			badSide.push(v);
 		}

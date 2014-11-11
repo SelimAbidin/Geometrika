@@ -30,6 +30,7 @@
     <classEntry path="com.selim.abidin.display.object.particles.HeroParticle"/>
     <classEntry path="com.selim.abidin.display.object.particles.BasicParticle"/>
     <classEntry path="com.selim.abidin.display.object.particles.SinusParticles"/>
+    <classEntry path="com.selim.abidin.display.enemies.IEnemy"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
